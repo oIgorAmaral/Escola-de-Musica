@@ -9,34 +9,33 @@ package ucb.estudo.escolamusica;
  * @author igor.aferreira
  */
 public class Violao extends InstrumentoMusical {
-    private int NumeroCordas;
+    private int numeroCordas; 
     
-    public Violao(String nome, String material) {
+    public Violao(String nome, String material, int numeroCordas) {
         super(nome, material);
-        this.NumeroCordas = NumeroCordas;
+        this.numeroCordas = numeroCordas;
     }
 
     @Override
     public void tocar() {
-      System.out.println("Tocando notas Brutas no: " + nome + "com" + NumeroCordas + "cordas...");
-      System.out.println("Dedilhando uma melodia METAL");
+
+        System.out.println("Tocando notas brutas no: " + nome + " com " + numeroCordas + " cordas...");
+        System.out.println("Dedilhando uma melodia de METAL!");
     }
-     @Override
-    public void afinar() {
-        super.afinar();
-    System.out.println("Ajustando a tensão das" + NumeroCordas + "cordas.");
-    
-    }
-    
+
     @Override
-    public void MostrarInformacoes(){
-        super.MostrarInformacoes();
-        System.out.println("Tipo: " + nome);
-        System.out.println("Material: " + material);
-        System.out.println("Numero de cordas: " + NumeroCordas);
+    public void afinar() {
+        super.afinar(); 
+        System.out.println("Ajustando a tensao das " + numeroCordas + " cordas.");
+    }
+
+    @Override
+    public void mostrarInformacoes() {
+        super.mostrarInformacoes(); 
+        System.out.println("Numero de cordas: " + numeroCordas);
     }
 
     public int getNumeroCordas() {
-        return NumeroCordas;
+        return numeroCordas;
     }
 }

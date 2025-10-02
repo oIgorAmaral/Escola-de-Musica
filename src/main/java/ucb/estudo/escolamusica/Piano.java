@@ -8,22 +8,24 @@ package ucb.estudo.escolamusica;
  *
  * @author igor.aferreira
  */
-public class Saxofone extends InstrumentoMusical {
+public class Piano extends InstrumentoMusical {
+    private int numeroDeTeclas;
 
-    public Saxofone(String nome, String material, String tipoDeSax) {
+    public Piano(String nome, String material, int numeroDeTeclas) {
         super(nome, material);
+        this.numeroDeTeclas = numeroDeTeclas;
     }
 
     @Override
     public void tocar() {
-        System.out.println("Tocando uma melodia de jazz no: " + nome);
-        System.out.println("Improvisando um solo suave.");
+        System.out.println("Tocando uma sonata no: " + nome + " com suas " + numeroDeTeclas + " teclas...");
+        System.out.println("Executando uma peça classica.");
     }
 
     @Override
     public void afinar() {
         super.afinar();
-        System.out.println("Ajustando a palheta do saxofone ");
+        System.out.println("Verificando a tensao das cordas para as " + numeroDeTeclas + " teclas.");
     }
 
     @Override
@@ -31,6 +33,10 @@ public class Saxofone extends InstrumentoMusical {
         super.mostrarInformacoes();
         System.out.println("Tipo: " + nome);
         System.out.println("Material: " + material);
+        System.out.println("Numero de teclas: " + numeroDeTeclas);
+    }
 
+    public int getNumeroDeTeclas() {
+        return numeroDeTeclas;
     }
 }
